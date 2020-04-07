@@ -17,7 +17,6 @@ def Talktome(audio):
 
 Talktome('Joey is ready')
 
-
 def myCommand():
 	print('Listening...')
 	with mic as source:
