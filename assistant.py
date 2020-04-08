@@ -4,6 +4,8 @@ import os
 import time
 import webbrowser
 import smtplib
+#user modules
+import timeNow as t
 import weather as w
 
 r=sr.Recognizer()
@@ -25,7 +27,7 @@ def myCommand():
 		audio=r.listen(source)
 	try:
 		command = r.recognize_google(audio)
-		print('You said '+ command + '\n')
+		print('You said '+ command)
 	except sr.UnknownValueError:
 		assistant(myCommand())
 	return command
@@ -38,6 +40,8 @@ def assistant(query):
 	if 'how is the weather' in query:
 		query=query.split(' ')
 		Talktome(w.tellWeather(query[-1]))
+	if 'what is the time' in query:
+		Talktome(t.tellTime())
 
 while True:
 	assistant(myCommand())
