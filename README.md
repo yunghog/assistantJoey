@@ -1,2 +1,3 @@
 # assistantJoey
- Desktop assistant by the name "Joey" (a famous character from the series FRIENDS). Build using speech recognition.
+ Desktop assistant built with python using speech recognition.
+ 
